@@ -1,4 +1,4 @@
-C# & VB.NET Twitter Wrapper/API
+C# Twitter Wrapper/API
 =========
 
 ---
@@ -14,35 +14,10 @@ A simple wrapper for twitter which uses HttpWebRequests. It includes the followi
   - Deleting,Favoriting or Retweeting a tweet
   - Get basic information about a selected user(Followers,Following etc)
   
-Both C# and VB.NET classes include *full* examples of how to use the class.
+C# includes a *full* examples of how to use the class.
 
 Examples
 --------------
- - VB.NET
- 
-```sh
-Public WithEvents Client As New Twitter
-
-Private Sub Login()
-
-    With Client
-    
-        .Login("UserName","Password")
-        If Client.SignedInTrue = True Then
-            MessageBox.Show("Signed In !")
-            //False as we don't want to reply to a tweet.
-            .Tweet("This is my Tweet", False)
-        Else
-            MessageBox.Show("Login Failed")
-        End If
-        
-    End With
-
-End Sub
-```
-
- - C#
-
 ```sh
         static void Main(string[] args)
         {
@@ -69,10 +44,6 @@ The C# project must have these references added
  - System.Drawing.
  - System.Windows.Forms.
  - Requires Framework 4.
- 
-The VB.Net project must have
- - System.Web.
- - Also requires Framework 4.
 
 
 System.Drawing and Forms are needed for the image uploading. If you do not require that method(ChangeImage) then you may remove it from the class but System.Web has to be added to the project for it to function.
