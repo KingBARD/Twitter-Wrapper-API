@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Twitter Wrapper/API : A C# Wrapper/API which uses HttpWebRequest to interact with Twitter." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Twitter Wrapper/API</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/KingBARD/Twitter-Wrapper-API">View on GitHub</a>
+
+          <h1 id="project_title">Twitter Wrapper/API</h1>
+          <h2 id="project_tagline">A C# Wrapper/API which uses HttpWebRequest to interact with Twitter.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/KingBARD/Twitter-Wrapper-API/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/KingBARD/Twitter-Wrapper-API/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="c-twitter-wrapperapi" class="anchor" href="#c-twitter-wrapperapi"><span class="octicon octicon-link"></span></a>C# Twitter Wrapper/API</h1>
+
+<hr><p>A simple wrapper for twitter which uses HttpWebRequests. It includes the following features.</p>
+
+<ul>
+<li>Login</li>
+<li>SignUp</li>
+<li>Tweet</li>
+<li>Direct Message</li>
+<li>Follow/Unfollow an account</li>
+<li>Change account settings(Change Email,ScreenName,Password etc)</li>
+<li>Check if a user exist</li>
+<li>Deleting,Favoriting or Retweeting a tweet</li>
+<li>Get basic information about a selected user(Followers,Following etc)</li>
+</ul><p>C# includes a <em>full</em> examples of how to use the class.</p>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<div class="highlight highlight-sh"><pre>        static void Main<span class="o">(</span>string<span class="o">[]</span> args<span class="o">)</span>
+        <span class="o">{</span>
+            Twitter.Twitter <span class="nv">Client</span> <span class="o">=</span> new Twitter.Twitter<span class="o">()</span><span class="p">;</span>
+
+            Client.Login<span class="o">(</span><span class="s2">"User"</span>,<span class="s2">"Password"</span><span class="o">)</span><span class="p">;</span>
+            <span class="k">if</span> <span class="o">(</span>Client.SignedIn <span class="o">==</span> <span class="nb">true</span><span class="o">)</span>
+            <span class="o">{</span>
+                Console.WriteLine<span class="o">(</span><span class="s2">"Signed In"</span><span class="o">)</span><span class="p">;</span>
+                Client.Tweet<span class="o">(</span><span class="s2">"My Message Again"</span>, <span class="nb">false</span><span class="o">)</span><span class="p">;</span>
+            <span class="o">}</span>
+            <span class="k">else</span>
+<span class="k">                </span>Console.WriteLine<span class="o">(</span><span class="s2">"Login Failed"</span><span class="o">)</span><span class="p">;</span>
+
+            Console.ReadLine<span class="o">()</span><span class="p">;</span>
+
+        <span class="o">}</span>
+</pre></div>
+
+<h5>
+<a name="please-note" class="anchor" href="#please-note"><span class="octicon octicon-link"></span></a>PLEASE NOTE</h5>
+
+<p>The C# project must have these references added</p>
+
+<ul>
+<li>System.Web.</li>
+<li>System.Drawing.</li>
+<li>System.Windows.Forms.</li>
+<li>Requires Framework 4.</li>
+</ul><p>System.Drawing and Forms are needed for the image uploading. If you do not require that method(ChangeImage) then you may remove it from the class but System.Web has to be added to the project for it to function.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Twitter Wrapper/API maintained by <a href="https://github.com/KingBARD">KingBARD</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
