@@ -15,7 +15,7 @@ namespace Twitter
     /// <summary>
     /// Bard/Brad
     /// https://github.com/KingBARD
-    /// 4.0 Framework
+    /// 4.0 Framework.
     /// System.Web Reference must be added.
     /// System.Drawing Reference must be added.
     /// </summary>
